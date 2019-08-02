@@ -30,6 +30,6 @@ app.get("/", (req, res) => {
     res.render("index");
 });
 
-app.listen(3000, () => {
-    console.log("Server started on port 3000");
+app.listen(process.env.PORT || 3000, () => {
+    console.log("server is running on 3000 port...");
 });
