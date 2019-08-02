@@ -1,26 +1,26 @@
 {
-  "name": "node_passport_login",
-  "version": "2.0.0",
-  "description": "Node.js authentication with Passport",
+  "name": "greak-admin",
+  "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "connect-flash": "^0.1.1",
-    "ejs": "^2.6.1",
-    "express": "^4.16.4",
-    "express-ejs-layouts": "^2.5.0",
-    "express-session": "^1.15.6",
-    "mongoose": "^5.4.1",
-    "passport": "^0.4.0",
-    "passport-local": "^1.0.0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ilhamksyuriadi/greak-admin.git"
   },
-  "devDependencies": {
-    "nodemon": "^1.18.9"
+  "author": "ilhamksyuriadi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ilhamksyuriadi/greak-admin/issues"
+  },
+  "homepage": "https://github.com/ilhamksyuriadi/greak-admin#readme",
+  "dependencies": {
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "mongoose": "^5.6.8",
+    "path": "^0.12.7"
   }
 }
