@@ -4,8 +4,7 @@
   "description": "Node.js authentication with Passport",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon app.js"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
