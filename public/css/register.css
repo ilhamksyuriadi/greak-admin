@@ -1,54 +1,50 @@
 body{
     margin: 0;
     padding: 0;
-    align-items: center;
 }
 
 .form-layout{
     display: flex;
-    justify-content: center;
     width: 100vw;
     height: 100vh;
-    align-items: center
+    align-items: center;
+    justify-content: center;
 }
 
 form{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 30%;
-    padding: 1em;
-    height: 200px;
+    width: 35%;
+    height: 70%;
     background: rgb(243, 229, 36);
     border-radius: 20px;
-    box-shadow: 0px 10px 20px 2px lightgray;
-}
-
-input, button{
-    align-self: center;
-    border-radius: 10px;   
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
+    box-shadow: 0px 0px 20px 5px lightgrey;
+    padding: 1em;
 }
 
 input{
     width: 90%;
+    align-self: center;
     height: 25px;
-    padding: 3px;
-    text-align: center;
+    border-radius: 10px;
     border: 1px solid rgb(177, 177, 33);
+    text-align: center;
+    padding: 3px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
 
 ::placeholder{
     color: rgb(175, 174, 174);
 }
 
-input:focus{
-    box-shadow: 0px 0px 10px 4px rgb(255, 196, 0);
-}
-
 button:focus, input:focus{
     outline: none;
+}
+
+input:focus{
+    box-shadow: 0px 0px 10px 4px rgb(255, 196, 0);
 }
 
 button {
@@ -57,6 +53,10 @@ button {
     height: 40px;
     width: 40%;
     border: none;
+    border-radius: 10px;
+    align-self: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
 
 button:hover{
