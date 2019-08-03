@@ -16,22 +16,48 @@ form{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 40%;
+    width: 30%;
     padding: 1em;
     height: 200px;
-    background: rgb(223, 222, 222);
+    background: rgb(243, 229, 36);
     border-radius: 20px;
     box-shadow: 0px 10px 20px 2px lightgray;
 }
 
-form input, button{
-    width: 80%;
-    height: 25px;
+input, button{
     align-self: center;
     border-radius: 10px;
     border: none;
 }
 
+input{
+    width: 90%;
+    height: 25px;
+    padding: 3px;
+    text-align: center;
+}
+
+::placeholder{
+    color: rgb(119, 119, 119);
+}
+
+input:focus{
+    box-shadow: 0px 0px 10px 4px rgb(255, 196, 0);
+}
+
 button:focus, input:focus{
     outline: none;
+}
+
+button {
+    background: rgb(32, 32, 32);
+    color: white;
+    height: 30px;
+    width: 40%;
+}
+
+button:hover{
+    background: rgb(65, 65, 65);
+    cursor: pointer;
+    transition: 0.5s;
 }
