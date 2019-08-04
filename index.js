@@ -1,6 +1,7 @@
 const express = require("express")
 const mongoose = require('mongoose');
-let path = require("path");
+const path = require("path");
+const bcrypt = require("bcryptjs")
 
 app = express()
 
@@ -43,13 +44,46 @@ app.get("/register", (req,res)=>{
   res.render("register")
 })
 
+app.get("/dashboard", (req,res)=>{
+  res.render("dashboard")
+})
+
 app.post("/addUser", (req,res)=>{
   let user = new User();
   user.id = req.body.id;
   user.name = req.body.name;
-  user.password = req.body.password;
-  user.save();
+
+  bcrypt.genSalt(10, (err, salt)=>{
+    bcrypt.hash(req.body.password, salt, (err,hash)=>{
+      user.password = hash
+      user.save()
+    })
+  })
+
   res.redirect("/")
+})
+
+app.post("/login",(req,res)=>{
+  const { id, password } = req.body
+  // let sign = null;
+  let sign = User.findOne({
+    id:id
+  }).then(user=>{
+    bcrypt.compare(password, user.password, (err, isMatch, next) => {
+      if (err) throw err;
+      if (isMatch) {
+        return true
+      }else{
+        return false
+      }
+    })
+  })
+
+  if (sign) {
+    res.redirect("/dashboard")
+  }else{
+    console.log("wrong password")
+  }
 })
 
 app.listen(process.env.PORT || 3000, () => {
