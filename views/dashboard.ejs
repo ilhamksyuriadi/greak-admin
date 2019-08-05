@@ -5,9 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/dashboard.css">
 </head>
 <body>
-    <h1>DASHBOARD</h1>
-    <h2>Welcome !</h2>
+    <div id="preview"></div>
+    <div>
+        <select name="contentType" id="dropdown">
+            <option value="paragraph">Paragraph</option>
+            <option value="image">Image</option>
+        </select>
+        <button id="add-content" onclick="addInput()">add content</button>
+    </div>
+    <form id="form" action=""></form>
+    <script src="./script/dashboard.js"></script>
 </body>
 </html>
